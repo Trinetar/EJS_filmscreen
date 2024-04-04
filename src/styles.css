@@ -11,16 +11,16 @@ body {
 }
 
 #sidebar {
-  width: 200px;
+  width: 250px;
   overflow-y: auto;
-  background-color: #333;
-  color: #221e1e;
+  background-color: #fdf3f3;
+  color: #f2dbdb;
 }
 
 #sidebar img {
   width: 100%;
   cursor: pointer;
-  border-bottom: 1px solid #666;
+  border-bottom: 1px solid #f0dede;
 }
 
 #sidebar img:hover {
@@ -29,21 +29,18 @@ body {
 
 #image-description {
   flex: 1;
-  padding: 20px;
-  background-color: #5b5656;
+  padding: 200px;
+  background-color: #000000;
   color: #eee7e7;
-  border-left: 1px solid #ccc;
+  border-left: 5px solid #ccc;
 }
 
-/* Styling for the container */
 #container {
-  border: 2px solid #ccc;
+  border: 2px solid #000000;
   border-radius: 5px;
   overflow: hidden;
 }
-
-/* Resetting default margin and padding for images */
 img {
-  margin: 0;
-  padding: 0;
+  margin: 5;
+  padding: 2;
 }
