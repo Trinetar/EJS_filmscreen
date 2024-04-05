@@ -1,6 +1,5 @@
 const fs = require('fs');
 
-// Define a map to store image descriptions
 const imageDescriptions = {
   'image1': 'Dune Part 1, Realsed in 2021, earned half a billon over OTT, began with House Atreides being given control of Arrakis, a desert planet whose harsh conditions mask rich deposits of spice. Water is extremely scarce, and the massive sandworms who roam the vast deserts kill everything in their paths',
   'image2': 'Dune Part 2, Released in 2024, Hoping to earn a billion, Following the destruction of House Atreides by House Harkonnen, Princess Irulan, the daughter of Padishah Emperor Shaddam IV, secretly journals that Paul Atreides may still be alive. On Arrakis, Stilgars Fremen troops, including Paul and his pregnant mother, Lady Jessica, overcome a Harkonnen patrol.', 
@@ -13,7 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const sidebar = document.getElementById('sidebar');
   const imageDescription = document.getElementById('image-description');
 
-  // Load images from the images directory
   fs.readdir('./images', (err, files) => {
     if (err) {
       console.error(err);
@@ -25,7 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
       img.src = `../images/${file}`;
       img.onclick = () => {
         const imageName = file.split('.')[0];
-        // Get the description from the map
         const description = imageDescriptions[imageName] || 'No description available';
         imageDescription.textContent = description;
       };
